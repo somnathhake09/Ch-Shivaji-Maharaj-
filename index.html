@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>छत्रपती शिवाजी महाराज — स्वराज्याचे शिल्पकार</title>
+<!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="shortcut icon" href="favicon.svg"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Mukta:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/></head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="ld-wrap">
+    <span class="ld-emblem">🚩</span>
+    <div class="ld-bar"><div class="ld-prog" id="ldProg"></div></div>
+    <p class="ld-msg">लोड होत आहे...</p>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">
+      <span class="nav-brand-icon">⚔</span>
+      <span>शिवछत्रपती</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"     class="nl"><span class="lang-mr">परिचय</span><span class="lang-en">About</span></a></li>
+      <li><a href="#childhood" class="nl"><span class="lang-mr">बालपण</span><span class="lang-en">Childhood</span></a></li>
+      <li><a href="#timeline"  class="nl"><span class="lang-mr">कालक्रम</span><span class="lang-en">Timeline</span></a></li>
+      <li><a href="#forts"     class="nl"><span class="lang-mr">किल्ले</span><span class="lang-en">Forts</span></a></li>
+      <li><a href="#battles"   class="nl"><span class="lang-mr">युद्धे</span><span class="lang-en">Battles</span></a></li>
+      <li><a href="#mavale"    class="nl"><span class="lang-mr">मावळे</span><span class="lang-en">Warriors</span></a></li>
+      <li><a href="#legacy"    class="nl"><span class="lang-mr">वारसा</span><span class="lang-en">Legacy</span></a></li>
+      <li><a href="#gallery"   class="nl"><span class="lang-mr">दालन</span><span class="lang-en">Gallery</span></a></li>
+    </ul>
+    <div class="lang-toggle" id="langToggle" title="भाषा बदला">
+      <button class="lt-btn active" id="ltMr">मराठी</button>
+      <button class="lt-btn" id="ltEn">EN</button>
+    </div>
+    <button class="ham" id="ham"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-frame">
+    <span class="hf-corner tl">⚜</span><span class="hf-corner tr">⚜</span>
+    <span class="hf-corner bl">⚜</span><span class="hf-corner br">⚜</span>
+    <div class="hf-line top"></div><div class="hf-line bot"></div>
+    <div class="hf-line lft"></div><div class="hf-line rgt"></div>
+  </div>
+  <div class="hero-content">
+
+    <div class="hero-tribute">
+      <span class="diya">🪔</span>
+      <div class="tribute-text">
+        <span class="t1 lang-mr">माझ्या दैवताला</span><span class="t1 lang-en">A tribute to my deity</span>
+        <span class="t2 lang-mr">मनाचा मुजरा</span><span class="t2 lang-en">A Heartfelt Salute</span>
+      </div>
+      <span class="diya">🪔</span>
+    </div>
+
+    <div class="hero-name">
+      <span class="hn-top lang-mr">छत्रपती</span><span class="hn-top lang-en">Chhatrapati</span>
+      <span class="hn-main lang-mr">शिवाजी महाराज</span><span class="hn-main lang-en" style="font-size:clamp(2rem,5.5vw,4rem)">Shivaji Maharaj</span>
+      <span class="hn-dates lang-mr">१९ फेब्रुवारी १६३० — ३ एप्रिल १६८०</span><span class="hn-dates lang-en">19 February 1630 — 3 April 1680</span>
+    </div>
+
+    <div class="hero-badge">
+      <span>🚩</span>
+      <span class="lang-mr">मराठा साम्राज्याचे संस्थापक</span><span class="lang-en">Founder of the Maratha Empire</span>
+      <span>🚩</span>
+    </div>
+
+    <p class="hero-tagline lang-mr">स्वराज्य माझा जन्मसिद्ध हक्क आहे</p><p class="hero-tagline lang-en">Swarajya is my birthright</p>
+    
+
+    <p class="hero-bio lang-mr">धर्मवीर, रणशूर आणि न्यायी — छत्रपती शिवाजी महाराज हे केवळ एक राजा नव्हते. ते एक युगपुरुष होते ज्यांनी करोडो रयतेसाठी स्वराज्याचे स्वप्न सत्यात उतरवले आणि मराठा साम्राज्याची भव्य उभारणी केली.</p><p class="hero-bio lang-en">Fearless, just and visionary — Chhatrapati Shivaji Maharaj was not merely a king. He was an epoch-maker who transformed the dream of Swarajya into reality for millions and established the great Maratha Empire.</p>
+    
+
+    <div class="hero-quote">
+      <span class="hq-mark">"</span>
+      <span class="hq-text lang-mr">स्वराज्य माझा जन्मसिद्ध हक्क आहे आणि तो मी मिळवणारच!</span><span class="hq-text lang-en">Swarajya is my birthright and I shall have it!</span>
+      
+    </div>
+
+    <div class="hero-btns">
+      <a href="#about" class="btn-main">
+        <span>महाराजांबद्दल जाणून घ्या</span>
+        
+        <span>→</span>
+      </a>
+      <a href="#timeline" class="btn-sec">
+        <span>इतिहासाचा कालपट</span>
+        
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-v">३५०+</span><span class="hstat-l lang-mr">किल्ले</span><span class="hstat-l lang-en">Forts</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-v">१६७४</span><span class="hstat-l lang-mr">राज्याभिषेक वर्ष</span><span class="hstat-l lang-en">Coronation Year</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-v">३०+</span><span class="hstat-l lang-mr">युद्धे जिंकली</span><span class="hstat-l lang-en">Battles Won</span></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-v">५१</span><span class="hstat-l lang-mr">वर्षे आयुष्य</span><span class="hstat-l lang-en">Years of Life</span></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hscroll-dot"></div>
+    <span>खाली स्क्रोल करा</span>
+    
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section about-sec" id="about">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">परिचय</span><span class="sec-chip lang-en">About</span>
+      <h2 class="sec-title lang-mr">महाराजांचा जीवनपरिचय</h2><h2 class="sec-title lang-en">Life of the Great King</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+      <p class="sec-desc">इतिहासाच्या सोनेरी पानांवर कोरलेले नाव — करोडो मराठ्यांचा अभिमान</p>
+      
+    </div>
+
+    <div class="about-grid">
+      <!-- Left: Portrait + Info -->
+      <div class="about-portrait-col reveal">
+        <div class="portrait-box" id="portraitBox">
+          <img loading="lazy"
+            src="images/maharaj.jpg"
+            alt="Chhatrapati Shivaji Maharaj"
+            onerror="this.closest('.portrait-box').classList.add('broken');this.remove()"/>
+        </div>
+        <div class="portrait-label">
+          <span class="pl-mr">छत्रपती शिवाजी महाराज</span>
+          
+        </div>
+        <div class="info-table">
+          <div class="info-row"><span class="ir-key mr">🎂 जन्म</span><span class="ir-val mr">१९ फेब्रुवारी १६३०</span></div>
+          <div class="info-row"><span class="ir-key mr">🏰 जन्मस्थान</span><span class="ir-val mr">शिवनेरी किल्ला</span></div>
+          <div class="info-row"><span class="ir-key mr">👨 वडील</span><span class="ir-val mr">शाहाजी महाराज</span></div>
+          <div class="info-row"><span class="ir-key mr">👩 आई</span><span class="ir-val mr">राजमाता जिजाबाई</span></div>
+          <div class="info-row"><span class="ir-key mr">👑 राज्याभिषेक</span><span class="ir-val mr">६ जून १६७४</span></div>
+          <div class="info-row"><span class="ir-key mr">📍 राजधानी</span><span class="ir-val mr">रायगड किल्ला</span></div>
+          <div class="info-row"><span class="ir-key mr">⚔ घराणे</span><span class="ir-val mr">भोसले</span></div>
+          <div class="info-row"><span class="ir-key mr">🕊 निधन</span><span class="ir-val mr">३ एप्रिल १६८०</span></div>
+        </div>
+      </div>
+
+      <!-- Right: Tags + Stories -->
+      <div class="about-right">
+        <div class="about-tags reveal">
+          <span class="tag saf mr">शूर योद्धा</span>
+          <span class="tag mr">न्यायी राजा</span>
+          <span class="tag mr">नौदल निर्माता</span>
+          <span class="tag saf mr">रयतेचा राजा</span>
+          <span class="tag mr">धर्मनिरपेक्ष</span>
+          <span class="tag mr">दूरदर्शी नेते</span>
+        </div>
+
+        <div class="story-block reveal" style="--i:1">
+          <h3>🌱 बालपण आणि शिक्षण</h3>
+          
+          <p>छत्रपती शिवाजी महाराजांचा जन्म १९ फेब्रुवारी १६३० रोजी शिवनेरी किल्ल्यावर झाला. आईचं नाव राजमाता जिजाबाई — त्यांनीच शिवाजींना रामायण, महाभारत आणि शूर वीरांच्या कथा सांगून मनात स्वराज्याची ज्योत लावली. गुरू दादोजी कोंडदेव यांनी तलवारबाजी, घोडेस्वारी आणि युद्धशास्त्र शिकवले.</p>
+          
+        </div>
+
+        <div class="story-block reveal" style="--i:2">
+          <h3>⚔ स्वराज्याची स्थापना</h3>
+          
+          <p>वयाच्या अवघ्या सोळाव्या वर्षी तोरणा किल्ला जिंकून महाराजांनी स्वराज्याचे पहिले पाऊल टाकले. मुघल, आदिलशाही आणि पोर्तुगीज — या तीन महाशक्तींशी एकाच वेळी लढत त्यांनी एक स्वतंत्र मराठा साम्राज्य उभारले. गनिमी काव्याच्या (गनिमी काव्य) जोरावर त्यांनी मोठ्या मोठ्या सैन्यांना पराभूत केले.</p>
+          
+        </div>
+
+        <div class="story-block reveal" style="--i:3">
+          <h3>🏛 प्रशासन आणि न्यायव्यवस्था</h3>
+          
+          <p>महाराजांनी अष्टप्रधान मंडळाची स्थापना करून एक सुव्यवस्थित प्रशासन उभारले. सर्व धर्मांचा आदर, मशिदींचे रक्षण, महिलांचा सन्मान आणि शेतकऱ्यांचे कल्याण हे त्यांच्या राज्यकारभाराचे मूलतत्त्व होते. ते खऱ्या अर्थाने "रयतेचा राजा" होते.</p>
+          
+          <div class="story-quote">
+            <span class="sq-mark">"</span>
+            <span class="sq-text mr">शत्रूच्या बलापेक्षा आपल्या बुद्धिचातुर्यावर विश्वास ठेवा.</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ बालपण ═══ -->
+<section class="section childhood-sec" id="childhood">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">बालपण</span><span class="sec-chip lang-en">Childhood</span>
+      <h2 class="sec-title lang-mr">शिवबाचे बालपण</h2><h2 class="sec-title lang-en">Childhood of Shivba</h2>
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+    </div>
+
+    <p class="childhood-intro reveal" style="--i:1">
+      शिवाजी महाराजांचे बालपण शिवनेरी किल्ल्यावर सुरू झाले. आईच्या रामायण-महाभारतातील
+      गोष्टींनी आणि गुरू दादोजी कोंडदेव यांच्या शिक्षणाने त्यांच्या व्यक्तिमत्त्वाला आकार मिळाला.
+      अगदी लहानपणापासूनच शिवाजींच्या मनात स्वराज्याची ज्योत पेटली होती.
+    </p>
+
+    <div class="childhood-cards">
+
+      <div class="cc-card reveal" style="--i:0">
+        <div class="cc-img-wrap">
+          <img loading="lazy"
+            src="images/jijamata.jpg"
+            alt="राजमाता जिजाबाई"
+            onerror="this.closest('.cc-img-wrap').style.background='#1a0800'"/>
+          <div class="cc-img-fade"></div>
+          <span class="cc-img-label">राजमाता</span>
+        </div>
+        <div class="cc-body">
+          <h3>राजमाता जिजाबाई</h3>
+          <span class="cc-subtitle">स्वराज्याची जननी</span>
+          <p>
+            जिजाबाईंनी शिवाजींना रामायण, महाभारत आणि वीरांच्या कथा सांगून त्यांच्यात
+            देशभक्ती आणि न्यायाची भावना जागृत केली. त्यांनी आपल्या पुत्राला स्वराज्य
+            स्थापनेची स्वप्ने दाखवली. आई म्हणजेच शिवाजींची खरी प्रेरणा होती —
+            त्यांच्याशिवाय छत्रपती घडलेच नसते.
+          </p>
+        </div>
+      </div>
+
+      <div class="cc-card reveal" style="--i:1">
+        <div class="cc-img-wrap">
+          <img loading="lazy"
+            src="images/Shivneri_Fort.jpg"
+            alt="शिवनेरी किल्ला"
+            onerror="this.closest('.cc-img-wrap').style.background='#1a0800'"/>
+          <div class="cc-img-fade"></div>
+          <span class="cc-img-label">जन्मभूमी</span>
+        </div>
+        <div class="cc-body">
+          <h3>शिवनेरी किल्ला</h3>
+          <span class="cc-subtitle">बालपणाची भूमी</span>
+          <p>
+            शिवनेरी किल्ला म्हणजे शिवाजी महाराजांची जन्मभूमी. या किल्ल्यावरच शिवबाने
+            आपले प्रारंभिक जीवन घालवले. पर्वत, जंगल आणि किल्ल्यांच्या सान्निध्यात
+            वाढलेल्या शिवाजींमध्ये धाडस आणि साहस अगदी स्वाभाविकपणे आले.
+          </p>
+        </div>
+      </div>
+
+      <div class="cc-card reveal" style="--i:2">
+        <div class="cc-img-wrap">
+          <img loading="lazy"
+            src="images/dadoji.jpg"
+            alt="दादोजी कोंडदेव"
+            onerror="this.closest('.cc-img-wrap').style.background='#1a0800'"/>
+          <div class="cc-img-fade"></div>
+          <span class="cc-img-label">गुरू</span>
+        </div>
+        <div class="cc-body">
+          <h3>दादोजी कोंडदेव</h3>
+          <span class="cc-subtitle">पहिले गुरू</span>
+          <p>
+            दादोजी कोंडदेव हे शिवाजी महाराजांचे पहिले गुरू होते. त्यांनी महाराजांना
+            तलवारबाजी, घोडेस्वारी, युद्धशास्त्र आणि राज्यकारभार यांचे शिक्षण दिले.
+            त्यांच्या मार्गदर्शनाशिवाय शिवाजी एवढे कुशल योद्धा बनलेच नसते.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIMELINE ═══ -->
+<section class="section timeline-sec" id="timeline">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">कालक्रम</span><span class="sec-chip lang-en">Timeline</span>
+      <h2 class="sec-title lang-mr">जीवनाचा सुवर्णपट</h2><h2 class="sec-title lang-en">The Golden Chronicle</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+    </div>
+    <div class="tl-wrap">
+      <div class="tl-line"></div>
+
+      <div class="tl-item tl-left" style="--i:0">
+        <div class="tl-card">
+          <div class="tl-year">१६३०</div>
+          <h3>जन्म – शिवनेरी किल्ला</h3>
+          <p>१९ फेब्रुवारी रोजी शिवनेरी किल्ल्यावर जन्म. शिवाईदेवीच्या नावावरून 'शिवाजी' नाव ठेवले.</p>
+          
+        </div>
+        <div class="tl-node">🌟</div>
+      </div>
+
+      <div class="tl-item tl-right" style="--i:1">
+        <div class="tl-card">
+          <div class="tl-year">१६४७</div>
+          <h3>तोरणा किल्ला विजय</h3>
+          <p>वयाच्या अवघ्या १७ व्या वर्षी तोरणा किल्ला जिंकला. स्वराज्याचे पहिले पाऊल, पहिला विजय.</p>
+          
+        </div>
+        <div class="tl-node">⚔</div>
+      </div>
+
+      <div class="tl-item tl-left" style="--i:2">
+        <div class="tl-card">
+          <div class="tl-year">१६५९</div>
+          <h3>अफझलखानाचा वध</h3>
+          <p>प्रतापगडाजवळ वाघनखाने अफझलखानाचा वध केला. आदिलशाहीला प्रचंड धक्का बसला. मराठ्यांचे मनोबल आकाशाला भिडले.</p>
+          
+        </div>
+        <div class="tl-node">🗡</div>
+      </div>
+
+      <div class="tl-item tl-right" style="--i:3">
+        <div class="tl-card">
+          <div class="tl-year">१६६०</div>
+          <h3>पन्हाळगडावरून सुटका</h3>
+          <p>सिद्दी जोहरच्या वेढ्यातून रात्रीच्या अंधारात यशस्वी सुटका. बाजीप्रभू देशपांडे यांचे अजरामर बलिदान.</p>
+          
+        </div>
+        <div class="tl-node">🌙</div>
+      </div>
+
+      <div class="tl-item tl-left" style="--i:4">
+        <div class="tl-card">
+          <div class="tl-year">१६६४</div>
+          <h3>सुरत लूट</h3>
+          <p>मुघलांचे श्रीमंत बंदर शहर लुटले. स्वराज्यासाठी प्रचंड खजिना मिळवला. औरंगजेबाला थेट आव्हान.</p>
+          
+        </div>
+        <div class="tl-node">🏹</div>
+      </div>
+
+      <div class="tl-item tl-right" style="--i:5">
+        <div class="tl-card">
+          <div class="tl-year">१६६६</div>
+          <h3>आग्र्याहून सुटका</h3>
+          <p>औरंगजेबाच्या नजरकैदेतून फळांच्या टोपल्यांमधून अजोड बुद्धिचातुर्याने सुटका. भारतीय इतिहासातील सर्वात धाडसी पलायन.</p>
+          
+        </div>
+        <div class="tl-node">🧺</div>
+      </div>
+
+      <div class="tl-item tl-left" style="--i:6">
+        <div class="tl-card">
+          <div class="tl-year">१६७०</div>
+          <h3>सिंहगड विजय</h3>
+          <p>तानाजी मालुसरे यांनी रात्री घोरपडीच्या सहाय्याने सिंहगड जिंकला. "गड आला पण सिंह गेला!" — महाराजांचे हृदय विदारक उद्गार.</p>
+          
+        </div>
+        <div class="tl-node">🦁</div>
+      </div>
+
+      <div class="tl-item tl-right" style="--i:7">
+        <div class="tl-card crown">
+          <div class="tl-year">१६७४</div>
+          <h3>राज्याभिषेक — रायगड 👑</h3>
+          <p>६ जून १६७४ — रायगडावर छत्रपती म्हणून भव्य राज्याभिषेक. काशीचे गागाभट्ट यांनी विधी केले. मराठा साम्राज्याची अधिकृत स्थापना. भारतीय इतिहासाचा सुवर्णक्षण.</p>
+          
+        </div>
+        <div class="tl-node crown">👑</div>
+      </div>
+
+      <div class="tl-item tl-left" style="--i:8">
+        <div class="tl-card">
+          <div class="tl-year">१६८०</div>
+          <h3>महानिर्वाण — रायगड</h3>
+          <p>३ एप्रिल १६८० रोजी रायगडावर महानिर्वाण. ते गेले पण त्यांचा आत्मा प्रत्येक मराठ्याच्या हृदयात आजही जगतो.</p>
+          
+        </div>
+        <div class="tl-node">🕊</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORTS ═══ -->
+<section class="section forts-sec" id="forts">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">किल्ले</span><span class="sec-chip lang-en">Forts</span>
+      <h2 class="sec-title lang-mr">गडांचे साम्राज्य</h2><h2 class="sec-title lang-en">Empire of Forts</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+      <p class="sec-desc">महाराजांनी ३५० हून अधिक किल्ले जिंकले, बांधले आणि सुरक्षित केले. हे किल्ले म्हणजे स्वराज्याचा कणा होते — त्यांचे घर, त्यांचे बळ.</p>
+      
+    </div>
+    <div class="forts-grid">
+
+      <div class="fort-card reveal" style="--i:0">
+        <div class="fc-img">
+          <img loading="lazy" src="images/raigadfort.jpg" alt="Raigad" onerror="this.closest('.fc-img').classList.add('broken');this.remove()"/>
+          <div class="fc-overlay"></div>
+          <span class="fc-badge mr">राजधानी</span>
+          <span class="fc-elev">⛰ ८२० मीटर</span>
+        </div>
+        <div class="fc-body">
+          <h3>🏰 रायगड किल्ला</h3>
+          <p class="fc-subtitle mr">मराठा साम्राज्याची राजधानी · रायगड जिल्हा</p>
+          
+          <p>रायगड म्हणजे महाराजांचं स्वप्न साकार झालेलं ठिकाण. येथेच ६ जून १६७४ रोजी राज्याभिषेक झाला आणि मराठा साम्राज्याची अधिकृत घोषणा झाली. महाराजांचे समाधीस्थळ आजही येथे आहे. रायगड हा प्रत्येक मराठ्याच्या हृदयाचा किल्ला आहे.</p>
+          
+          <div class="fc-pills">
+            <span class="fc-pill mr">राज्याभिषेक</span>
+            <span class="fc-pill mr">समाधी</span>
+            <span class="fc-pill mr">राजधानी</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fort-card reveal" style="--i:1">
+        <div class="fc-img">
+          <img loading="lazy" src="images/sihgadfort.jpg" alt="Sinhagad" onerror="this.closest('.fc-img').classList.add('broken');this.remove()"/>
+          <div class="fc-overlay"></div>
+          <span class="fc-badge mr">तानाजींचा गड</span>
+          <span class="fc-elev">⛰ १२९२ मीटर</span>
+        </div>
+        <div class="fc-body">
+          <h3>🦁 सिंहगड किल्ला</h3>
+          <p class="fc-subtitle mr">तानाजींचं बलिदान · पुणे जिल्हा</p>
+          
+          <p>तानाजी मालुसरे यांनी रात्री घोरपडीच्या सहाय्याने हा किल्ला जिंकला आणि वीरगती प्राप्त केली. महाराज म्हणाले — "गड आला पण सिंह गेला!" हे शब्द आजही हृदयाला भिडतात.</p>
+          
+          <div class="fc-pills">
+            <span class="fc-pill mr">तानाजी बलिदान</span>
+            <span class="fc-pill mr">शौर्य</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fort-card reveal" style="--i:2">
+        <div class="fc-img">
+          <img loading="lazy" src="images/pratapfort.jpg" alt="Pratapgad" onerror="this.closest('.fc-img').classList.add('broken');this.remove()"/>
+          <div class="fc-overlay"></div>
+          <span class="fc-badge mr">अफझलखान वध</span>
+          <span class="fc-elev">⛰ १०८० मीटर</span>
+        </div>
+        <div class="fc-body">
+          <h3>⚔ प्रतापगड किल्ला</h3>
+          <p class="fc-subtitle mr">अफझलखान वधाची पुण्यभूमी · सातारा जिल्हा</p>
+          
+          <p>१० नोव्हेंबर १६५९ रोजी येथे महाराजांनी वाघनखाने अफझलखानाचा वध केला. भवानी मातेचे मंदिर या किल्ल्यावर आहे. हा विजय स्वराज्यासाठी टर्निंग पॉइंट होता.</p>
+          
+          <div class="fc-pills">
+            <span class="fc-pill mr">अफझलखान वध</span>
+            <span class="fc-pill mr">भवानी मंदिर</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fort-card reveal" style="--i:3">
+        <div class="fc-img">
+          <img loading="lazy" src="images/Shivneri_Fort.jpg" alt="Shivneri" onerror="this.closest('.fc-img').classList.add('broken');this.remove()"/>
+          <div class="fc-overlay"></div>
+          <span class="fc-badge mr">जन्मभूमी</span>
+          <span class="fc-elev">⛰ १०६५ मीटर</span>
+        </div>
+        <div class="fc-body">
+          <h3>🌟 शिवनेरी किल्ला</h3>
+          <p class="fc-subtitle mr">महाराजांची जन्मभूमी · जुन्नर, पुणे जिल्हा</p>
+          
+          <p>१९ फेब्रुवारी १६३० रोजी या किल्ल्यावर शिवाजी महाराजांचा जन्म झाला. शिवाईदेवीचे मंदिर आणि जिजाबाई-शिवाजींचा सुंदर पुतळा येथे आहे. हा किल्ला म्हणजे स्वराज्याची पहाट आहे.</p>
+          
+          <div class="fc-pills">
+            <span class="fc-pill mr">जन्मस्थान</span>
+            <span class="fc-pill mr">शिवाई देवी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BATTLES ═══ -->
+<section class="section battles-sec" id="battles">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">युद्धे</span><span class="sec-chip lang-en">Battles</span>
+      <h2 class="sec-title lang-mr">रणभूमीवरील पराक्रम</h2><h2 class="sec-title lang-en">Valor on the Battlefield</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+    </div>
+    <div class="battles-grid">
+
+      <div class="battle-card reveal" style="--i:0">
+        <div class="bc-yr">१६५९</div><div class="bc-icon">🗡</div>
+        <h3>प्रतापगड युद्ध</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>आदिलशाही</span></div>
+        <p>अफझलखानाचा वध — स्वराज्यासाठी सर्वात मोठा विजय. या एका विजयाने मराठ्यांची शक्ती सिद्ध झाली.</p>
+        
+        <div class="bc-result win mr">✅ मराठ्यांचा विजय</div>
+      </div>
+
+      <div class="battle-card reveal" style="--i:1">
+        <div class="bc-yr">१६६०</div><div class="bc-icon">🌙</div>
+        <h3>पन्हाळगड वेढा</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>सिद्दी जोहर</span></div>
+        <p>चार महिन्यांच्या वेढ्यातून रात्री यशस्वी सुटका. बाजीप्रभूंनी घोडखिंडीत जीव देऊन वेळ विकत घेतला.</p>
+        
+        <div class="bc-result mr">🌙 धाडसी सुटका</div>
+      </div>
+
+      <div class="battle-card reveal" style="--i:2">
+        <div class="bc-yr">१६७०</div><div class="bc-icon">🦁</div>
+        <h3>सिंहगड विजय</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>मुघल</span></div>
+        <p>रात्री घोरपडीने चढून तानाजींनी किल्ला जिंकला — वीरमरण पावले पण विजय मिळवला!</p>
+        
+        <div class="bc-result win mr">✅ मराठ्यांचा विजय</div>
+      </div>
+
+      <div class="battle-card reveal" style="--i:3">
+        <div class="bc-yr">१६६४</div><div class="bc-icon">🏹</div>
+        <h3>सुरत मोहीम</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>मुघल</span></div>
+        <p>मुघलांचे सर्वात श्रीमंत बंदर लुटून स्वराज्यासाठी भरपूर संपत्ती मिळवली. औरंगजेब हादरला.</p>
+        
+        <div class="bc-result win mr">✅ मराठ्यांचा विजय</div>
+      </div>
+
+      <div class="battle-card reveal" style="--i:4">
+        <div class="bc-yr">१६५९–७०</div><div class="bc-icon">⚓</div>
+        <h3>सागरी युद्धे</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>पोर्तुगीज / सिद्दी</span></div>
+        <p>भारताचे पहिले संघटित नौदल उभारून समुद्रावर वर्चस्व. पोर्तुगीज आणि सिद्दींना धडा शिकवला.</p>
+        
+        <div class="bc-result win mr">✅ नौदल विजय</div>
+      </div>
+
+      <div class="battle-card reveal" style="--i:5">
+        <div class="bc-yr">१६५९–७९</div><div class="bc-icon">🔥</div>
+        <h3>गनिमी काव्य</h3>
+        <div class="bc-vs"><span>मराठे</span> <strong>VS</strong> <span>सर्व शत्रू</span></div>
+        <p>महाराजांनी गनिमी काव्याचा (गनिमी काव्य) वापर करून मोठ्या सैन्यांना पराभूत केले. ही रणनीती आजही जगभर शिकवली जाते.</p>
+        
+        <div class="bc-result win mr">✅ रणनीती विजय</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAVALE ═══ -->
+<section class="section mavale-sec" id="mavale">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">मावळे</span><span class="sec-chip lang-en">Warriors</span>
+      <h2 class="sec-title lang-mr">शिवरायांचे शूर मावळे</h2><h2 class="sec-title lang-en">The Brave Warriors of Shivaji</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+      <p class="sec-desc">महाराजांचे खरे बळ त्यांचे निष्ठावंत मावळे होते. या वीरांशिवाय स्वराज्य शक्य नव्हते.</p>
+      
+    </div>
+    <div class="mavale-grid">
+
+      <div class="mavale-card reveal" style="--i:0">
+        <span class="mc-icon">🗡</span>
+        <h3>तानाजी मालुसरे</h3>
+        <span class="mc-title mr">सिंहगडाचा सिंह</span>
+        <p>सिंहगड जिंकताना वीरगती प्राप्त केली. त्यांच्या बलिदानावर महाराजांनी उद्गारले — "गड आला पण सिंह गेला!" हे शब्द अजरामर आहेत.</p>
+        
+      </div>
+
+      <div class="mavale-card reveal" style="--i:1">
+        <span class="mc-icon">🏇</span>
+        <h3>बाजीप्रभू देशपांडे</h3>
+        <span class="mc-title mr">घोडखिंडीचा वीर</span>
+        <p>पन्हाळगडावरून सुटका होताना घोडखिंडीत एकट्याने शत्रूशी लढत वीरमरण पावले. महाराज सुरक्षित पोहोचेपर्यंत लढत राहिले.</p>
+        
+      </div>
+
+      <div class="mavale-card reveal" style="--i:2">
+        <span class="mc-icon">🔱</span>
+        <h3>राजमाता जिजाबाई</h3>
+        <span class="mc-title mr">स्वराज्याची जननी</span>
+        <p>महाराजांच्या मनात स्वराज्याची ज्योत लावणाऱ्या, संस्कार देणाऱ्या आई. त्यांच्याशिवाय शिवाजी महाराज असते तरी काय? खरे महाराज घडवणाऱ्या त्या आई.</p>
+        
+      </div>
+
+      <div class="mavale-card reveal" style="--i:3">
+        <span class="mc-icon">⚓</span>
+        <h3>कान्होजी आंग्रे</h3>
+        <span class="mc-title mr">मराठा नौदलाचा सेनापती</span>
+        <p>महाराजांच्या नौदलाचे प्रमुख. पोर्तुगीज, ब्रिटिश आणि डच यांच्या आरमाराला धडका दिल्या. समुद्रावर मराठ्यांचे राज्य स्थापित केले.</p>
+        
+      </div>
+
+      <div class="mavale-card reveal" style="--i:4">
+        <span class="mc-icon">📜</span>
+        <h3>दादोजी कोंडदेव</h3>
+        <span class="mc-title mr">महाराजांचे पहिले गुरू</span>
+        <p>महाराजांना तलवारबाजी, घोडेस्वारी, युद्धशास्त्र आणि प्रशासन शिकवले. त्यांच्याशिवाय महाराज एवढे कुशल योद्धा झाले नसते.</p>
+        
+      </div>
+
+      <div class="mavale-card reveal" style="--i:5">
+        <span class="mc-icon">🌙</span>
+        <h3>नेताजी पालकर</h3>
+        <span class="mc-title mr">घोडदळाचा सर्वोच्च सेनापती</span>
+        <p>महाराजांच्या घोडदळाचे नेतृत्व करीत अनेक लढाया जिंकल्या. त्यांचा वेग आणि आक्रमकता शत्रूसाठी भयंकर होती.</p>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEGACY ═══ -->
+<section class="section legacy-sec" id="legacy">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">वारसा</span><span class="sec-chip lang-en">Legacy</span>
+      <h2 class="sec-title lang-mr">अजरामर वारसा</h2><h2 class="sec-title lang-en">An Immortal Legacy</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+      <p class="sec-desc">महाराज देहाने गेले, पण त्यांनी मागे ठेवलेला वारसा आजही भारताला प्रेरणा देतो — आणि देत राहील.</p>
+      
+    </div>
+    <div class="legacy-grid">
+
+      <div class="legacy-item reveal" style="--i:0">
+        <span class="li-icon">⚓</span>
+        <div class="li-body">
+          <h3>भारतीय नौदलाचे जनक</h3>
+          <p>महाराजांनी भारताचे पहिले संघटित नौदल उभारले. आजचे भारतीय नौदल त्यांनाच आपला आदर्श मानते. नौदल दिवस त्यांच्याच स्मृतीत साजरा होतो.</p>
+          
+        </div>
+      </div>
+
+      <div class="legacy-item reveal" style="--i:1">
+        <span class="li-icon">⚖</span>
+        <div class="li-body">
+          <h3>आधुनिक प्रशासनाचे प्रणेते</h3>
+          <p>अष्टप्रधान मंडळ, स्वतंत्र न्यायव्यवस्था, भ्रष्टाचाराला शून्य सहनशीलता — महाराजांचे प्रशासन त्यांच्या काळापेक्षा शंभर वर्षे पुढे होते.</p>
+          
+        </div>
+      </div>
+
+      <div class="legacy-item reveal" style="--i:2">
+        <span class="li-icon">🛕</span>
+        <div class="li-body">
+          <h3>धर्मनिरपेक्षतेचा खरा आदर्श</h3>
+          <p>मशिदींचे रक्षण, कुराणाचा आदर, मुस्लिम सरदारांना प्रमुख पदे — महाराज हे खऱ्या अर्थाने सर्वधर्मसमभावाचे प्रतीक होते.</p>
+          
+        </div>
+      </div>
+
+      <div class="legacy-item reveal" style="--i:3">
+        <span class="li-icon">📜</span>
+        <div class="li-body">
+          <h3>मराठी भाषेचा उत्कर्ष</h3>
+          <p>फारसीऐवजी मराठी आणि संस्कृत शब्दांचा वापर करणारा 'राज्यव्यवहारकोश' तयार केला. मराठी भाषेला राजाश्रय मिळाला.</p>
+          
+        </div>
+      </div>
+
+      <div class="legacy-item reveal" style="--i:4">
+        <span class="li-icon">🌾</span>
+        <div class="li-body">
+          <h3>रयतेचे राज्य</h3>
+          <p>शेतकऱ्यांना जमीन, न्याय्य कर, महिलांचा सन्मान — "रयत म्हणजेच राज्य" हा विचार महाराजांनी प्रत्यक्षात आणला.</p>
+          
+        </div>
+      </div>
+
+      <div class="legacy-item reveal" style="--i:5">
+        <span class="li-icon">🔥</span>
+        <div class="li-body">
+          <h3>स्वातंत्र्य आंदोलनाचे स्फूर्तिस्थान</h3>
+          <p>बाळ गंगाधर टिळक, स्वामी विवेकानंद, नेताजी सुभाषचंद्र बोस — या सर्वांनी महाराजांकडून प्रेरणा घेतली. स्वातंत्र्यलढ्याचे खरे स्फूर्तिस्थान.</p>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section class="section gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">दालन</span><span class="sec-chip lang-en">Gallery</span>
+      <h2 class="sec-title lang-mr">चित्र दालन</h2><h2 class="sec-title lang-en">Photo Gallery</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+    </div>
+    <div class="gal-mosaic">
+      <div class="gal-item gal-tall reveal" style="--i:0" data-cap-mr="छत्रपती शिवाजी महाराज — ऐतिहासिक चित्र" data-cap-en="Chhatrapati Shivaji Maharaj — Historical Portrait">
+        <img loading="lazy" src="images/maharaj2.jpg" alt="Shivaji Maharaj"/>
+        <div class="gal-ov"><span>⊕</span><p>ऐतिहासिक चित्र</p></div>
+      </div>
+      <div class="gal-item reveal" style="--i:1" data-cap-mr="रायगड किल्ला — मराठा साम्राज्याची राजधानी" data-cap-en="Raigad Fort — Capital of the Maratha Empire">
+        <img loading="lazy" src="images/raigad2.jpg" alt="Raigad"/>
+        <div class="gal-ov"><span>⊕</span><p>रायगड किल्ला</p></div>
+      </div>
+      <div class="gal-item reveal" style="--i:2" data-cap-mr="सिंहगड किल्ला — तानाजींचा गड" data-cap-en="Sinhagad Fort — Tanaji's fort">
+        <img loading="lazy" src="images/sinhgad2.jpg" alt="Sinhagad"/>
+        <div class="gal-ov"><span>⊕</span><p>सिंहगड किल्ला</p></div>
+      </div>
+      <div class="gal-item gal-wide reveal" style="--i:3" data-cap-mr="राजगड — महाराजांची पहिली राजधानी, २५ वर्षे येथे होते" data-cap-en="Rajgad Fort — Maharaj's first capital, resided here for 25 years">
+        <img loading="lazy" src="images/rajgad2.jpg" alt="Rajgad"/>
+        <div class="gal-ov"><span>⊕</span><p>राजगड किल्ला</p></div>
+      </div>
+      <div class="gal-item reveal" style="--i:4" data-cap-mr="राजमाता जिजाबाई — स्वराज्याची जननी" data-cap-en="Rajmata Jijabai — Mother of Swarajya">
+        <img loading="lazy" src="images/jijamata.jpg" alt="Jijabai"/>
+        <div class="gal-ov"><span>⊕</span><p>राजमाता जिजाबाई</p></div>
+      </div>
+      <div class="gal-item reveal" style="--i:5" data-cap-mr="शिवनेरी किल्ला — महाराजांची जन्मभूमी" data-cap-en="Shivneri Fort — Maharaj's birthplace">
+        <img loading="lazy" src="images/Shivneri_Fort.jpg" alt="Shivneri"/>
+        <div class="gal-ov"><span>⊕</span><p>शिवनेरी किल्ला</p></div>
+      </div>
+      <div class="gal-item reveal" style="--i:5" data-cap-mr="स्वराज्याचा पहिला किल्ला, वयाच्या १७ व्या वर्षी जिंकला" data-cap-en="Torana Fort — The First Fort of Swarajya">
+        <img loading="lazy" src="images/torana.jpg" alt="Torana"/>
+        <div class="gal-ov"><span>⊕</span><p>तोरणा किल्ला</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-bg" id="lbBg"></div>
+    <div class="lb-inner">
+      <button class="lb-close" id="lbClose">✕</button>
+      <img id="lbImg" src="" alt=""/>
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTES ═══ -->
+<section class="section quotes-sec" id="quotes">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="sec-chip lang-mr">सुविचार</span><span class="sec-chip lang-en">Quotes</span>
+      <h2 class="sec-title lang-mr">अमर वाणी</h2><h2 class="sec-title lang-en">Immortal Words</h2>
+      
+      <div class="sec-ornament"><span></span>⚜<span></span></div>
+    </div>
+    <div class="quotes-slider">
+      <div class="q-track">
+
+        <div class="q-slide active">
+          <span class="q-mark">❝</span>
+          <blockquote>
+            <span>स्वराज्य माझा जन्मसिद्ध हक्क आहे आणि तो मी मिळवणारच!</span>
+            
+          </blockquote>
+          <cite>— छत्रपती शिवाजी महाराज</cite>
+        </div>
+
+        <div class="q-slide">
+          <span class="q-mark">❝</span>
+          <blockquote>
+            <span>शत्रू कितीही बलवान असो, धैर्य आणि चातुर्य हेच खरे शस्त्र आहे.</span>
+            
+          </blockquote>
+          <cite>— छत्रपती शिवाजी महाराज</cite>
+        </div>
+
+        <div class="q-slide">
+          <span class="q-mark">❝</span>
+          <blockquote>
+            <span>रयतेचे रक्षण हे राजाचे सर्वोच्च कर्तव्य आहे. जो राजा रयतेला त्रास देतो, तो राजा नव्हे — तो जुलमी आहे.</span>
+            
+          </blockquote>
+          <cite>— छत्रपती शिवाजी महाराज</cite>
+        </div>
+
+        <div class="q-slide">
+          <span class="q-mark">❝</span>
+          <blockquote>
+            <span>गड आला पण सिंह गेला!</span>
+            
+          </blockquote>
+          <cite>— छत्रपती शिवाजी महाराज (तानाजींच्या बलिदानानंतर)</cite>
+        </div>
+
+        <div class="q-slide">
+          <span class="q-mark">❝</span>
+          <blockquote>
+            <span>आईच्या शिकवणुकीतूनच माझ्यात स्वराज्याची ज्योत पेटली. जिजाऊ माझी खरी प्रेरणा आहे.</span>
+            
+          </blockquote>
+          <cite>— छत्रपती शिवाजी महाराज</cite>
+        </div>
+
+      </div>
+      <div class="q-controls">
+        <button class="q-btn" id="qPrev">‹</button>
+        <div class="q-dots" id="qDots"></div>
+        <button class="q-btn" id="qNext">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer::before"></div>
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo"><span>⚔</span><span>शिवछत्रपती</span></div>
+        <p>छत्रपती शिवाजी महाराजांच्या जीवन, पराक्रम आणि अजरामर वारशाला समर्पित हे संकेतस्थळ. पुढील पिढ्यांना प्रेरणा देत राहो.</p>
+        
+        <p class="footer-salute">🚩 जय शिवाजी! जय भवानी! 🚩 | Jai Shivaji! Jai Bhavani! 🚩</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>जलद दुवे</h4><h4>जलद दुवे</h4>
+        <ul>
+          <li><a href="#about"><span>परिचय</span></a></li>
+          <li><a href="#timeline"><span>कालक्रम</span></a></li>
+          <li><a href="#forts"><span>किल्ले</span></a></li>
+          <li><a href="#battles"><span>युद्धे</span></a></li>
+          <li><a href="#mavale"><span>मावळे</span></a></li>
+          <li><a href="#legacy"><span>वारसा</span></a></li>
+          <li><a href="#gallery"><span>दालन</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-big-q">
+        <span class="fbq-mark">❝</span>
+        <div class="fbq-text">
+          <p>स्वराज्य माझा जन्मसिद्ध हक्क आहे आणि तो मी मिळवणारच!</p>
+          
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bar">
+      <span>© २०२६ — छत्रपती शिवाजी महाराज माहिती संकेतस्थळ | सर्व हक्क राखीव | डिझाइन व विकसित: <a href="https://github.com/somnathhake09">सोमनाथ हाके</a></span>
+      
+      <span>🚩 हर हर महादेव! 🚩</span>
+    </div>
+  </div>
+</footer>
+
+<button class="stt" id="stt" title="वर जा">↑</button>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+  <script src="script.js" defer></script></body>
+</html>

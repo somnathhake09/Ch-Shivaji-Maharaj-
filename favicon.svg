@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="6" fill="#0d0500"/>
+  
+  <!-- Gold border -->
+  <rect width="32" height="32" rx="6" fill="none" stroke="#c8910c" stroke-width="1.5"/>
+  
+  <!-- Pole -->
+  <line x1="10" y1="5" x2="10" y2="27" stroke="#e8b830" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Pole bottom base -->
+  <rect x="8" y="25" width="4" height="2" rx="1" fill="#c8910c"/>
+  
+  <!-- Saffron flag - triangle -->
+  <polygon points="10,6 26,12 10,18" fill="#ff7a00"/>
+  
+  <!-- Flag highlight -->
+  <polygon points="10,6 26,12 10,11" fill="#ffaa44" opacity="0.4"/>
+  
+  <!-- Small gold dot on flag tip -->
+  <circle cx="10" cy="5.5" r="1.5" fill="#e8b830"/>
+</svg>
