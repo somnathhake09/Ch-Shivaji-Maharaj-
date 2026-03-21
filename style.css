@@ -1156,6 +1156,20 @@ ul { list-style:none; }
 .lang-en { display: none !important; }
 body.english .lang-en { display: inline !important; }
 body.english .lang-mr { display: none !important; }
+body.english .tl-card p,
+body.english .tl-card h3,
+body.english .fc-body h3,
+body.english .fc-body p,
+body.english .battle-card h3,
+body.english .battle-card p,
+body.english .mavale-card h3,
+body.english .mavale-card p,
+body.english .legacy-item h3,
+body.english .legacy-item p,
+body.english .cc-body h3,
+body.english .cc-body p,
+body.english .childhood-intro,
+body.english .q-slide blockquote { display: none !important; }
 
 /* Block-level english elements */
 body.english p.lang-en,
