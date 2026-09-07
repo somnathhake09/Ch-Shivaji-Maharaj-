@@ -16,7 +16,7 @@ function Battles() {
               <h3>{lang==="mr"?b.nameMr:b.nameEn}</h3>
               <div className="bc-vs">
                 <span>{lang==="mr"?"मराठे":"Marathas"}</span>
-                <strong>VS</strong>
+                <strong>{lang==="mr" ? "विरुद्ध" : "VS"}</strong>
                 <span>{lang==="mr"?b.vsMr:b.vsEn}</span>
               </div>
               <p>{lang==="mr"?b.descMr:b.descEn}</p>
