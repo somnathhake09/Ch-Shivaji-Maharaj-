@@ -37,10 +37,10 @@ const TITLES = {
   "/battles": "मोहिमा — छत्रपती शिवाजी महाराज",
   "/mavale": "मावळे — छत्रपती शिवाजी महाराज",
   "/legacy": "वारसा — छत्रपती शिवाजी महाराज",
-  "/gallery": "Gallery — छत्रपती शिवाजी महाराज",
+  "/gallery": "दालन — छत्रपती शिवाजी महाराज",
   "/map": "नकाशा — छत्रपती शिवाजी महाराज",
   "/infographic": "आकडेवारी — छत्रपती शिवाजी महाराज",
-  "/quiz": "Quiz — छत्रपती शिवाजी महाराज",
+  "/quiz": "प्रश्नमंजुषा — छत्रपती शिवाजी महाराज",
   "/letters": "पत्रे — छत्रपती शिवाजी महाराज",
   "/quotes": "सुविचार — छत्रपती शिवाजी महाराज",
   "/sources": "स्रोत व संदर्भ — छत्रपती शिवाजी महाराज",
@@ -74,10 +74,12 @@ export default function App() {
       <Navbar setLang={setLang} />
       <main><Page /></main>
       <Footer />
-      <MusicPlayer />
+      <div className="floating-stack">
+        <MusicPlayer />
+        <PDFDownload />
+      </div>
       <Chatbot />
       <JayantiPopup />
-      <PDFDownload />
     </LangContext.Provider>
   );
 }
