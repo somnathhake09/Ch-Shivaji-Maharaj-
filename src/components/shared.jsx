@@ -9,7 +9,7 @@ const t = (mr, en, lang) => lang === "mr" ? mr : en;
 // ── DATA ──────────────────────────────────────────────────────────
 // Primary navbar — exact labels/order requested for the site
 const NAV_LINKS = [
-  { href: "/",          mr: "Home",        en: "Home" },
+  { href: "/",          mr: "मुख्यपृष्ठ",   en: "Home" },
   { href: "/about",     mr: "जीवनप्रवास",  en: "Life Journey" },
   { href: "/childhood", mr: "बालपण",       en: "Childhood" },
   { href: "/timeline",  mr: "कालरेषा",     en: "Timeline" },
@@ -17,8 +17,8 @@ const NAV_LINKS = [
   { href: "/battles",   mr: "मोहिमा",      en: "Campaigns" },
   { href: "/mavale",    mr: "मावळे",       en: "Mavale" },
   { href: "/legacy",    mr: "वारसा",       en: "Legacy" },
-  { href: "/gallery",   mr: "Gallery",     en: "Gallery" },
-  { href: "/quiz",      mr: "Quiz",        en: "Quiz" },
+  { href: "/gallery",   mr: "दालन",        en: "Gallery" },
+  { href: "/quiz",      mr: "प्रश्नमंजुषा",en: "Quiz" },
 ];
 
 // Secondary links (footer) — remaining pages not in the primary navbar
@@ -1118,7 +1118,8 @@ const STYLES = `
   @media(max-width:480px){ .chatbot-window{width:calc(100vw - 2rem);right:1rem;} }
 
   /* ── JAYANTI POPUP ── */
-  .jayanti-popup { position:fixed;top:80px;right:24px;z-index:850;max-width:320px;background:linear-gradient(135deg,#0d0500,#1a0a00);border:1px solid rgba(200,145,12,.4);border-radius:16px;padding:1.2rem 1.4rem;box-shadow:0 8px 40px rgba(0,0,0,.7),0 0 30px rgba(255,122,0,.2);animation:popupIn .4s ease; }
+  .jayanti-backdrop { position:fixed; inset:0; z-index:849; background:rgba(0,0,0,.55); backdrop-filter:blur(3px); animation:popupIn .3s ease; }
+  .jayanti-popup { position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:850;max-width:340px;width:calc(100vw - 2.5rem);background:linear-gradient(135deg,#0d0500,#1a0a00);border:1px solid rgba(200,145,12,.4);border-radius:16px;padding:1.2rem 1.4rem;box-shadow:0 8px 40px rgba(0,0,0,.7),0 0 30px rgba(255,122,0,.2);animation:popupIn .4s ease; }
   @keyframes popupIn { from{opacity:0;transform:translateY(-15px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)} }
   .jp-close { position:absolute;top:10px;right:12px;background:none;border:none;color:var(--mute);cursor:pointer;font-size:.9rem;transition:color .2s; }
   .jp-close:hover { color:var(--saf); }
@@ -1742,7 +1743,7 @@ const STYLES = `
 
   /* ── MUSIC PLAYER ── */
   .music-player {
-    position: fixed; bottom: 26px; left: 26px; z-index: 800;
+    position: fixed; bottom: 26px; left: 26px; z-index: 9000; pointer-events: auto;
     background: rgba(13,5,0,.92); border: 1px solid var(--bdr);
     border-radius: 14px; padding: .7rem 1rem;
     display: flex; align-items: center; gap: .75rem;
@@ -1755,7 +1756,7 @@ const STYLES = `
     width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
     background: linear-gradient(135deg,#5a2000,var(--saf));
     border: none; color: #000; font-size: 1rem;
-    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; pointer-events: auto; display: flex; align-items: center; justify-content: center;
     transition: all .3s;
   }
   .mp-btn:hover { transform: scale(1.1); }
@@ -1786,15 +1787,17 @@ const STYLES = `
     to   { transform: scaleY(1);   opacity: 1; }
   }
 
-  /* Floating PDF/summary download button — positioned above the music
-     player so the two floating widgets never overlap. */
-  .pdf-dl-btn{position:fixed;bottom:96px;left:26px;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:10px;color:#000;font-family:var(--fd);font-size:.78rem;font-weight:700;padding:8px 14px;cursor:pointer;z-index:799;box-shadow:0 4px 16px rgba(255,122,0,.4);transition:all .3s;display:flex;align-items:center;gap:5px}
+  /* Floating widgets on the left (PDF summary + music player) stack in a
+    single fixed flex column so they never overlap, regardless of the
+    music player's open/closed height. */
+  .floating-stack{position:fixed;bottom:26px;left:26px;z-index:9000;pointer-events:auto;display:flex;flex-direction:column-reverse;align-items:flex-start;gap:10px}
+  .pdf-dl-btn{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:10px;color:#000;font-family:var(--fd);font-size:.78rem;font-weight:700;padding:8px 14px;cursor:pointer;box-shadow:0 4px 16px rgba(255,122,0,.4);transition:all .3s;display:flex;align-items:center;gap:5px}
   .pdf-dl-btn:hover{transform:translateY(-2px)}
-  .music-fab-closed{position:fixed;bottom:26px;left:26px;z-index:800;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:50%;width:44px;height:44px;color:#000;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(255,122,0,.5);transition:all .3s}
-  .music-player-box{position:fixed;bottom:26px;left:26px;z-index:800;background:rgba(10,4,0,.94);border:1px solid rgba(200,145,12,.3);border-radius:16px;padding:.8rem 1rem;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 20px rgba(255,122,0,.1);min-width:220px;max-width:260px;font-family:var(--fb)}
+  .music-fab-closed{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:50%;width:44px;height:44px;color:#000;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(255,122,0,.5);transition:all .3s}
+  .music-player-box{position:static;background:rgba(10,4,0,.94);border:1px solid rgba(200,145,12,.3);border-radius:16px;padding:.8rem 1rem;backdrop-filter:blur(8px);box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 20px rgba(255,122,0,.1);min-width:220px;max-width:260px;font-family:var(--fb)}
   @media (max-width:640px){
-    .pdf-dl-btn{bottom:84px;left:14px;padding:7px 11px;font-size:.72rem}
-    .music-fab-closed,.music-player-box{left:14px}
+    .floating-stack{bottom:14px;left:14px;gap:8px}
+    .pdf-dl-btn{padding:7px 11px;font-size:.72rem}
   }
 `;
 
@@ -2153,10 +2156,13 @@ function JayantiPopup() {
 
   if (!show || dismissed) return null;
 
+  const close = () => { setShow(false); setDismissed(true); };
+
   return (
-    <div className="jayanti-popup">
-      <button className="jp-close" onClick={() => { setShow(false); setDismissed(true); }}>✕</button>
-      <div className="jp-icon">🚩</div>
+    <div className="jayanti-backdrop" onClick={close}>
+      <div className="jayanti-popup" onClick={e => e.stopPropagation()}>
+        <button className="jp-close" onClick={close}>✕</button>
+        <div className="jp-icon">🚩</div>
       <div className="jp-title">
         {lang==="mr" ? "छत्रपती शिवाजी महाराज — महत्त्वाच्या तारखा" : "Chhatrapati Shivaji Maharaj — Important Dates"}
       </div>
@@ -2180,6 +2186,7 @@ function JayantiPopup() {
       </div>
       <div className="jp-msg">
         {lang==="mr" ? "🚩 जय शिवाजी! जय भवानी! 🚩" : "🚩 Jai Shivaji! Jai Bhavani! 🚩"}
+      </div>
       </div>
     </div>
   );
@@ -2310,8 +2317,8 @@ function CustomCursor() {
     const animate = () => {
       const dx = pos.current.x - ring.current.x;
       const dy = pos.current.y - ring.current.y;
-      ring.current.x += dx * 0.15;
-      ring.current.y += dy * 0.15;
+      ring.current.x += dx * 0.35;
+      ring.current.y += dy * 0.35;
       if (dotRef.current) {
         dotRef.current.style.left = pos.current.x + 'px';
         dotRef.current.style.top  = pos.current.y + 'px';
@@ -2479,23 +2486,76 @@ For detailed references, see the "Sources & References" page on this site.
 // before enabling playback, so nothing is mislabeled.
 function MusicPlayer() {
   const lang = useLang();
-  const [show, setShow] = useState(true);
-  const TRACKS = [];
+  const [show, setShow] = useState(false);
 
-  if (!show) return (
-    <button onClick={() => setShow(true)} className="music-fab-closed" title={lang==="mr" ? "पार्श्वसंगीत" : "Music"}>🎵</button>
-  );
+  if (!show) {
+    return (
+      <button
+        type="button"
+        className="music-fab-closed"
+        onClick={() => setShow(true)}
+        title={lang === "mr" ? "पार्श्वसंगीत" : "Music"}
+      >
+        🎵
+      </button>
+    );
+  }
 
   return (
     <div className="music-player-box">
-      <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'.5rem'}}>
-        <span style={{fontSize:'.7rem', color:'var(--saf)', fontWeight:700, letterSpacing:'.1em'}}>
-          🎵 {lang==="mr" ? "पार्श्वसंगीत" : "MUSIC"}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: ".5rem",
+        }}
+      >
+        <span
+          style={{
+            fontSize: ".7rem",
+            color: "var(--saf)",
+            fontWeight: 700,
+            letterSpacing: ".1em",
+          }}
+        >
+          🎵 {lang === "mr" ? "पार्श्वसंगीत" : "MUSIC"}
         </span>
-        <button onClick={() => setShow(false)} style={{background:'none', border:'none', color:'var(--mute)', cursor:'pointer', fontSize:'.8rem', padding:'0 2px'}}>✕</button>
+
+        <button
+          type="button"
+          aria-label={lang === "mr" ? "संगीत बंद करा" : "Close music"}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setShow(false);
+          }}
+          style={{
+            position: "relative",
+            zIndex: 100001,
+            background: "transparent",
+            border: "0",
+            color: "var(--mute)",
+            cursor: "pointer",
+            fontSize: "1rem",
+            lineHeight: 1,
+            padding: "6px 8px",
+            pointerEvents: "auto",
+          }}
+        >
+          ✕
+        </button>
       </div>
-      <p style={{fontSize:'.78rem', color:'var(--mute)', lineHeight:1.5, margin:0}}>
-        {lang==="mr"
+
+      <p
+        style={{
+          fontSize: ".78rem",
+          color: "var(--mute)",
+          lineHeight: 1.5,
+          margin: 0,
+        }}
+      >
+        {lang === "mr"
           ? "सध्या कोणतेही ट्रॅक जोडलेले नाहीत. योग्य परवानाकृत ऐतिहासिक/भक्तिसंगीत लवकरच जोडले जाईल."
           : "No tracks are configured yet. Properly licensed historical/devotional music will be added here soon."}
       </p>
