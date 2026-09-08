@@ -245,7 +245,7 @@ const STYLES = `
   @keyframes shimmer{from{background-position:0%}to{background-position:200%}}
   .hero-name{display:flex;flex-direction:column;align-items:center;margin-bottom:.8rem}
   .hn-top{font-family:var(--fd);font-size:clamp(1.1rem,2.6vw,1.75rem);color:var(--cream2);letter-spacing:.06em}
-  .hn-main{font-family:var(--fd);font-size:clamp(2.6rem,7.5vw,6rem);font-weight:400;line-height:1;background:linear-gradient(135deg,var(--gold3) 0%,var(--saf2) 40%,var(--gold2) 70%,var(--gold3) 100%);background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite;filter:drop-shadow(0 0 40px rgba(200,145,12,.5))}
+  .hn-main{font-family:var(--fd);font-size:clamp(2.6rem,6.5vw,5rem);font-weight:400;line-height:1;background:linear-gradient(135deg,var(--gold3) 0%,var(--saf2) 40%,var(--gold2) 70%,var(--gold3) 100%);background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite;filter:drop-shadow(0 0 40px rgba(200,145,12,.5))}
   .hn-dates{font-family:var(--fb);font-size:.8rem;color:var(--mute);letter-spacing:.12em;margin-top:.3rem}
   .hero-badge{display:inline-flex;align-items:center;gap:12px;font-family:var(--fd);font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.08em;color:var(--gold2);margin-bottom:1.4rem;background:rgba(200,145,12,.1);border:1px solid rgba(200,145,12,.3);padding:8px 22px;border-radius:30px}
   .hero-tagline{font-family:var(--fd);font-size:clamp(.95rem,2vw,1.2rem);color:var(--saf3);letter-spacing:.07em;margin-bottom:1rem}
@@ -456,7 +456,7 @@ const STYLES = `
 @media (min-width: 1440px) {
   .wrap { max-width: 1320px; }
   .sec-title { font-size: 3.2rem; }
-  .hn-main { font-size: 7rem; }
+  .hn-main { font-size: 5.5rem; }
   .forts-grid { grid-template-columns: repeat(2,1fr); gap: 28px; }
   .battles-grid { grid-template-columns: repeat(3,1fr); gap: 22px; }
   .mavale-grid { grid-template-columns: repeat(3,1fr); gap: 24px; }
