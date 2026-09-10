@@ -1793,9 +1793,9 @@ const STYLES = `
     single fixed flex column so they never overlap, regardless of the
     music player's open/closed height. */
   .floating-stack{position:fixed;bottom:26px;left:26px;z-index:9000;pointer-events:auto;display:flex;flex-direction:column-reverse;align-items:flex-start;gap:10px}
-  .pdf-dl-btn{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:10px;color:#000;font-family:var(--fd);font-size:.78rem;font-weight:700;padding:8px 14px;cursor:pointer;box-shadow:0 4px 16px rgba(255,122,0,.4);transition:all .3s;display:flex;align-items:center;gap:5px}
+  .pdf-dl-btn{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:10px;color:#000;font-family:var(--fd);font-size:.78rem;font-weight:700;padding:8px 14px;cursor:pointer;box-shadow:0 2px 8px rgba(255,122,0,.25);transition:all .3s;display:flex;align-items:center;gap:5px}
   .pdf-dl-btn:hover{transform:translateY(-2px)}
-  .music-fab-closed{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:50%;width:44px;height:44px;color:#000;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(255,122,0,.5);transition:all .3s}
+  .music-fab-closed{position:static;background:linear-gradient(135deg,#5a2000,var(--saf));border:none;border-radius:50%;width:44px;height:44px;color:#000;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(255,122,0,.3);transition:all .3s}
   .music-player-box{position:static;background:rgba(10,4,0,.94);border:1px solid rgba(200,145,12,.3);border-radius:16px;padding:.8rem 1rem;backdrop-filter:blur(8px);box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 20px rgba(255,122,0,.1);min-width:220px;max-width:260px;font-family:var(--fb)}
   @media (max-width:640px){
     .floating-stack{bottom:14px;left:14px;gap:8px}
