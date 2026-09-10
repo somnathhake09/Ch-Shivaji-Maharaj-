@@ -236,21 +236,21 @@ const STYLES = `
   .hf-line.top{top:6px;left:30px;right:30px;height:1px}.hf-line.bot{bottom:6px;left:30px;right:30px;height:1px}
   .hf-line.lft{left:6px;top:30px;bottom:30px;width:1px;background:linear-gradient(180deg,transparent,rgba(200,145,12,.22),transparent)}
   .hf-line.rgt{right:6px;top:30px;bottom:30px;width:1px;background:linear-gradient(180deg,transparent,rgba(200,145,12,.22),transparent)}
-  .hero-tribute{display:inline-flex;align-items:center;gap:18px;margin-bottom:1.6rem;position:relative}
+  .hero-tribute{display:inline-flex;align-items:center;gap:18px;margin-bottom:2rem;position:relative}
   .diya{font-size:1.8rem;filter:drop-shadow(0 0 12px rgba(255,180,0,.9));animation:diyaFlame 2.5s ease-in-out infinite alternate}
   @keyframes diyaFlame{0%{transform:scale(1) rotate(-4deg)}50%{transform:scale(1.12)}100%{transform:scale(1.06) rotate(4deg)}}
   .tribute-text{display:flex;flex-direction:column;align-items:center;gap:2px}
   .t1{font-family:var(--fd);font-size:clamp(.9rem,1.8vw,1.1rem);color:var(--cream2);letter-spacing:.1em}
   .t2{font-family:var(--fd);font-size:clamp(1.4rem,3.5vw,2.3rem);background:linear-gradient(90deg,var(--gold2),var(--saf3),var(--gold3),var(--gold2));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
   @keyframes shimmer{from{background-position:0%}to{background-position:200%}}
-  .hero-name{display:flex;flex-direction:column;align-items:center;margin-bottom:.8rem}
+  .hero-name{display:flex;flex-direction:column;align-items:center;margin-bottom:1.2rem}
   .hn-top{font-family:var(--fd);font-size:clamp(1.1rem,2.6vw,1.75rem);color:var(--cream2);letter-spacing:.06em}
   .hn-main{font-family:var(--fd);font-size:clamp(2.6rem,6.5vw,5rem);font-weight:400;line-height:1;background:linear-gradient(135deg,var(--gold3) 0%,var(--saf2) 40%,var(--gold2) 70%,var(--gold3) 100%);background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite;filter:drop-shadow(0 0 40px rgba(200,145,12,.5))}
-  .hn-dates{font-family:var(--fb);font-size:.8rem;color:var(--mute);letter-spacing:.12em;margin-top:.3rem}
-  .hero-badge{display:inline-flex;align-items:center;gap:12px;font-family:var(--fd);font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.08em;color:var(--gold2);margin-bottom:1.4rem;background:rgba(200,145,12,.1);border:1px solid rgba(200,145,12,.3);padding:8px 22px;border-radius:30px}
-  .hero-tagline{font-family:var(--fd);font-size:clamp(.95rem,2vw,1.2rem);color:var(--saf3);letter-spacing:.07em;margin-bottom:1rem}
-  .hero-bio{font-size:clamp(.95rem,1.7vw,1.06rem);color:var(--cream2);opacity:.88;max-width:640px;margin:0 auto 1.4rem;line-height:1.9}
-  .hero-quote{display:inline-flex;align-items:flex-start;gap:8px;background:rgba(255,122,0,.07);border:1px solid var(--bdr2);border-radius:12px;padding:14px 22px;margin-bottom:1.8rem;max-width:640px}
+  .hn-dates{font-family:var(--fb);font-size:.8rem;color:var(--mute);letter-spacing:.12em;margin-top:.6rem}
+  .hero-badge{display:inline-flex;align-items:center;gap:12px;font-family:var(--fd);font-size:clamp(1rem,2vw,1.3rem);letter-spacing:.08em;color:var(--gold2);margin-bottom:1.8rem;background:rgba(200,145,12,.1);border:1px solid rgba(200,145,12,.3);padding:8px 22px;border-radius:30px}
+  .hero-tagline{font-family:var(--fd);font-size:clamp(.95rem,2vw,1.2rem);color:var(--saf3);letter-spacing:.07em;margin-bottom:1.3rem}
+  .hero-bio{font-size:clamp(.95rem,1.7vw,1.06rem);color:var(--cream2);opacity:.88;max-width:640px;margin:0 auto 1.8rem;line-height:1.9}
+  .hero-quote{display:inline-flex;align-items:flex-start;gap:8px;background:rgba(255,122,0,.07);border:1px solid var(--bdr2);border-radius:12px;padding:14px 22px;margin-bottom:2.2rem;max-width:640px}
   .hq-mark{font-size:2.4rem;line-height:.7;color:var(--saf);opacity:.45;flex-shrink:0;font-family:Georgia,serif}
   .hq-text{font-family:var(--fd);font-size:clamp(.95rem,1.9vw,1.18rem);color:var(--saf3);line-height:1.72;text-align:left}
   .hero-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.2rem}
