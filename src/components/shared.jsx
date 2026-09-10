@@ -1675,16 +1675,18 @@ const STYLES = `
     transition: opacity .3s;
   }
   .cc-dot {
-    position: absolute; width: 12px; height: 12px; border-radius: 50%;
-    background: var(--saf); transform: translate(-50%,-50%);
-    box-shadow: 0 0 10px var(--saf), 0 0 20px rgba(255,122,0,.4);
-    transition: transform .1s, width .2s, height .2s;
-  }
-  .cc-ring {
-    position: absolute; width: 36px; height: 36px; border-radius: 50%;
-    border: 1.5px solid rgba(255,122,0,.5); transform: translate(-50%,-50%);
-    transition: transform .12s ease, width .2s, height .2s, opacity .2s;
-  }
+  position: absolute; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--saf); transform: translate(-50%,-50%);
+  pointer-events: none;
+  box-shadow: 0 0 6px var(--saf);
+  transition: transform .1s, width .2s, height .2s;
+}
+.cc-ring {
+  position: absolute; width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid rgba(255,122,0,.4); transform: translate(-50%,-50%);
+  pointer-events: none;
+  transition: transform .12s ease, width .2s, height .2s, opacity .2s;
+}
   .cc-flag {
     position: absolute; font-size: 1rem; transform: translate(-50%,-120%);
     opacity: 0; transition: opacity .2s; pointer-events: none;
